@@ -11,24 +11,7 @@ export default class MelderViewModel implements IMelderViewModel {
     }
 
     @action
-    public async setName(state: string): void {
+    public setName(state: string): void {
         this.name = state;
-
-        try {
-            const file = await openFile();
-            const fileContent = await readFile(file);
-
-        } catch (ex) {
-            dasdasd
-        }
-
-
-
-
-        console.error(fileContent);
-
-
-
-        return;
     }
 }
