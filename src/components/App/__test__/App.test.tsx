@@ -12,6 +12,10 @@ describe('AppComponent', () => {
         test('should render warning state', () => {
             // TODO:
         });
+
+        test('', () => {
+
+        });
     });
 
     describe('interactions', () => {

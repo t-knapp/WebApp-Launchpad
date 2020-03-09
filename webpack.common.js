@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-var TSLintPlugin = require('tslint-webpack-plugin');
+const TSLintPlugin = require('tslint-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -23,7 +23,8 @@ module.exports = {
             template: './src/index.html'
         }),
         new TSLintPlugin({
-            files: ['./src/**/*.ts', './src/**/*.tsx']
+            files: ['./src/**/*.ts', './src/**/*.tsx'],
+            exclude: ['./src/**/*.test.ts', './src/**/*.test.tsx']
         })
     ],
     module: {
@@ -33,10 +34,11 @@ module.exports = {
                 use: [{
                     loader: 'ts-loader',
                     options: {
+                        configFile: 'tsconfig.webpack.json',
                         compiler: 'ttypescript'
                     }
                 }],
-                exclude: /node_modules/
+                exclude: /(node_modules|__test__)/
             },
             {
                 test: /\.js$/,

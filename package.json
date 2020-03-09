@@ -20,8 +20,7 @@
       "<rootDir>/node_modules/"
     ],
     "testMatch": [
-      "**/__test__/*.test.js?(x)",
-      "**/__test__/*.test.ts?(x)"
+      "**/__test__/*.(ts|tsx|js)"
     ],
     "moduleDirectories": [
       "node_modules",
