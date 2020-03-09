@@ -2,7 +2,6 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 var TSLintPlugin = require('tslint-webpack-plugin');
 
 module.exports = {
@@ -22,9 +21,6 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html'
-        }),
-        new MomentLocalesPlugin({
-            localesToKeep: ['de'],  //English is included by default
         }),
         new TSLintPlugin({
             files: ['./src/**/*.ts', './src/**/*.tsx']
