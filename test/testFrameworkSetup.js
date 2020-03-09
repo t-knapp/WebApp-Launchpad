@@ -5,8 +5,8 @@
 import {} from 'jest-enzyme';
 
 // set global variable "lang"
-import lang from '../src/js/i18n/lang/lang.de.js';
-global.lang = lang;
+// import lang from '../src/js/i18n/lang/lang.de.js';
+// global.lang = lang;
 
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';

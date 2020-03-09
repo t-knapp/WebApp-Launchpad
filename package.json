@@ -14,17 +14,7 @@
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|dll)$": "<rootDir>/test/__mocks__/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/test/__mocks__/styleMock.js",
-      "@builder/(.*)$": "<rootDir>/src/refactored/builders/$1",
-      "@component/(.*)$": "<rootDir>/src/refactored/components/$1",
-      "@exception/(.*)$": "<rootDir>/src/refactored/exceptions/$1",
-      "@helper/(.*)$": "<rootDir>/src/refactored/helpers/$1",
-      "@model/(.*)$": "<rootDir>/src/refactored/models/$1",
-      "@modelProvider/(.*)$": "<rootDir>/src/refactored/models/modelProviders/$1",
-      "@provider/(.*)$": "<rootDir>/src/refactored/providers/$1",
-      "@repository/(.*)$": "<rootDir>/src/refactored/repositories/$1",
-      "@service/(.*)$": "<rootDir>/src/refactored/services/$1",
-      "@viewModel/(.*)$": "<rootDir>/src/refactored/viewModels/$1"
+      "\\.(css|less)$": "<rootDir>/test/__mocks__/styleMock.js"
     },
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",

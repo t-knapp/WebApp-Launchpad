@@ -6,7 +6,7 @@
     "target": "ES6",
     "jsx": "react",
     "sourceMap": true,
-    "lib": ["ES7", "DOM"],
+    "lib": ["es7", "dom"],
     "downlevelIteration": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
@@ -22,20 +22,7 @@
         "transform": "ts-auto-mock/transformer",
         "cacheBetweenTests": false
       }
-    ],
-    "baseUrl": "src",
-    "paths": {
-      "@builder/*": ["builders/*"],
-      "@component/*": ["components/*"],
-      "@exception/*": ["exceptions/*"],
-      "@helper/*": ["helpers/*"],
-      "@model/*": ["models/*"],
-      "@modelProvider/*": ["models/modelProviders/*"],
-      "@provider/*": ["providers/*"],
-      "@repository/*": ["repositories/*"],
-      "@service/*": ["services/*"],
-      "@viewModel/*": ["viewModels/*"]
-    }
+    ]
   },
   "include": [
     "src/**/*.ts",
