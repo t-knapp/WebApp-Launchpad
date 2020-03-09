@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ES6",
+    "target": "ES6",
+    "jsx": "react",
+    "sourceMap": true,
+    "lib": ["ES7", "DOM"],
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "transform": "ts-nameof",
+        "type": "raw"
+      },
+      {
+        "transform": "ts-auto-mock/transformer",
+        "cacheBetweenTests": false
+      }
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@builder/*": ["builders/*"],
+      "@component/*": ["components/*"],
+      "@exception/*": ["exceptions/*"],
+      "@helper/*": ["helpers/*"],
+      "@model/*": ["models/*"],
+      "@modelProvider/*": ["models/modelProviders/*"],
+      "@provider/*": ["providers/*"],
+      "@repository/*": ["repositories/*"],
+      "@service/*": ["services/*"],
+      "@viewModel/*": ["viewModels/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
