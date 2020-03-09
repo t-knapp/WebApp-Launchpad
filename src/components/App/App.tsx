@@ -3,15 +3,18 @@ import React from 'react';
 import emoji from '../../../assets/images/10-denker-rcm600x0.jpg';
 import './App.less';
 import IMelderViewModel from '../../domain/viewmodels/IMelderViewModel';
+import Menu from '../Menu/Menu';
+import {observer} from 'mobx-react';
 
 type Props = {
     title: string,
     viewModel: IMelderViewModel
 };
 
-export default function App(props: Props): ReactElement {
+function App(props: Props): ReactElement {
     return (
         <div className='AppComponent'>
+            <Menu viewModel={props.viewModel} tile='Unser Menue' />
             <h1>{props.title}</h1>
             <h2>{props.viewModel.name}</h2>
             <p>
@@ -25,3 +28,5 @@ export default function App(props: Props): ReactElement {
         </div>
     );
 }
+
+export default observer(App);

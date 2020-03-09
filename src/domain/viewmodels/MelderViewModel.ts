@@ -1,19 +1,34 @@
 import IMelderViewModel from './IMelderViewModel';
+import {action, observable} from 'mobx';
 
 export default class MelderViewModel implements IMelderViewModel {
-    public readonly name: string;
 
-    private _state: boolean;
+    @observable
+    public name: string;
 
     constructor(name: string) {
         this.name = name;
     }
 
-    public setState(state: boolean): void {
-        this._state = state;
-    }
+    @action
+    public async setName(state: string): void {
+        this.name = state;
 
-    public get state(): boolean {
-        return this._state;
+        try {
+            const file = await openFile();
+            const fileContent = await readFile(file);
+
+        } catch (ex) {
+            dasdasd
+        }
+
+
+
+
+        console.error(fileContent);
+
+
+
+        return;
     }
 }
