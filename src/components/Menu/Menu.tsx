@@ -1,15 +1,11 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 import {boundMethod} from 'autobind-decorator';
-import IMelderViewModel from '../../domain/viewmodels/IMelderViewModel';
+import './Menu.less';
 
-type Props = {
-    tile: string,
-    viewModel: IMelderViewModel
-};
+type Props = { };
 
 type State = {
-    toggled: boolean,
-    value: string
+    collapsed: boolean
 };
 
 export default class Menu extends React.Component<Props, State> {
@@ -18,30 +14,24 @@ export default class Menu extends React.Component<Props, State> {
         super(props);
 
         this.state = {
-            toggled: false,
-            value: ''
+            collapsed: true
         };
     }
 
     @boundMethod
     private _toggle(): void {
-        this.setState({toggled: !this.state.toggled});
-    }
-
-    @boundMethod
-    private _inputChanged(event: ChangeEvent<HTMLInputElement>): void {
-        this.props.viewModel.setName(event.currentTarget.value);
+        this.setState({collapsed: !this.state.collapsed});
     }
 
     public render(): React.ReactElement {
         return (
-            <div>
-                <p>{this.props.tile}</p>
-                <p>{this.state.toggled ? 'Toggled' : 'NotToggled'}</p>
-                <button onClick={this._toggle} >Toggle</button>
-                <input type={'text'} onChange={this._inputChanged}/>
-                <p>Value: {this.state.value}</p>
-                <p>ViewModel Name: {this.props.viewModel.name}</p>
+            <div className='menu'>
+                <ul>
+                    <li>Home</li>
+                    <li>Portfolio</li>
+                    <li>Contact</li>
+                    <li>Disclaimer</li>
+                </ul>
             </div>
         );
     }
