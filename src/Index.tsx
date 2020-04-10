@@ -5,6 +5,6 @@ import App from './components/App/App';
 import MelderViewModel from './domain/viewmodels/MelderViewModel';
 
 ReactDOM.render (
-    <App title='GMA Simulator Web' viewModel={new MelderViewModel('Hochofen IV')}/>,
+    <App title='WebApp Launchpad' viewModel={new MelderViewModel('Hochofen IV')}/>,
     document.getElementById('root')
 );
