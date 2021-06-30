@@ -6,6 +6,8 @@ module.exports = merge(common, {
     devtool: 'source-map',
     devServer: {
         contentBase: './dist',
-        openPage: 'index.html'
+        openPage: 'index.html',
+        compress: true,
+        port: 9000
     }
 });
