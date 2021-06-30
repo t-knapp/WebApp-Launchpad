@@ -1,3 +1,7 @@
-// Ignore all files
-**/*
-*
+.git
+*Dockerfile*
+*docker-compose*
+node_modules
+
+.idea
+dist

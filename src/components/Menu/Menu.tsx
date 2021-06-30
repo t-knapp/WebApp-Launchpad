@@ -23,6 +23,12 @@ export default class Menu extends React.Component<Props, State> {
         this.setState({collapsed: !this.state.collapsed});
     }
 
+    @boundMethod
+    private async _getConfig(): Promise<void> {
+        const response = await fetch('config.json');
+        console.log(await response.json());
+    }
+
     public render(): React.ReactElement {
         return (
             <div className='menu'>
@@ -30,7 +36,8 @@ export default class Menu extends React.Component<Props, State> {
                     <li>Home</li>
                     <li>Portfolio</li>
                     <li>Contact</li>
-                    <li>Disclaimer</li>
+                    <li>About</li>
+                    <li onClick={this._getConfig}>Config</li>
                 </ul>
             </div>
         );
